@@ -1,0 +1,58 @@
+<template>
+  <require from="./signup.css"></require>
+  Signup Page
+  <div class="container-fluid" style="min-height: 621px; margin: 0px; background: rgb(42, 60, 97);">
+    <div class="container" style="width: 600px; height: 570px; background-color:rgb(20, 34, 63); border-radius: 25px; 
+    align-items: center">
+      <div class="panel panel-default">
+        <div class="input-field panel-heading" style="height: 100px; max-width: 500px;">
+          <h5 style="height: 100px; max-width: 500px; padding: 30px; font-weight: bold; margin-top: 0px; color: white;"><i class="material-icons prefix">account_circle</i></h5>
+        </div>
+
+        <div class="panel-body">
+          <form action="#" class="row">
+
+            <div class="input-field col m6 s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="nameId" type="text" class="validate">
+              <label for="nameId">Name</label>
+            </div>
+
+            <div class="input-field col m6 s12">
+              <i class="material-icons prefix">email</i>
+              <input id="emailId" type="email" class="validate">
+              <label for="emailId">Email</label>
+            </div>
+
+            <div class="input-field col m6 s12">
+              <i class="material-icons prefix">phone</i>
+              <input id="phoneId" type="text" class="validate">
+              <label for="phoneId">Phone</label>
+            </div>
+
+            <div class="input-field col m6 s12">
+              <i class="material-icons prefix">lock</i>
+              <input id="passwordId" type="password" class="validate">
+              <label for="passwordId">Password</label>
+            </div>
+
+            <div class="col m12 s12" style="text-align: center;">
+              <!-- <h5 class="center-align">This should be center aligned</h5> -->
+              <button class=" btn waves-effect waves-light" style="border-radius: 25px; position: absolute; margin: 0px; padding-left: 50px; padding-right: 50px;" type="submit"
+                name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+            <!-- <div style="background-color:#6697b4; overflow-y: scroll; align-items: center">
+                <button>Sign up</button>
+              </div> -->
+        </div>
+
+        </form>
+
+        <!-- background-color: rgb(21, 32, 43); overflow-y: scroll; -->
+      </div>
+    </div>
+  </div>
+  </div>
+</template>
