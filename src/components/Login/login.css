@@ -1,0 +1,18 @@
+.d-flex {
+  display: flex
+}
+
+.login-container {
+  width: 50%;
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.full-length {
+  width: 90%
+}

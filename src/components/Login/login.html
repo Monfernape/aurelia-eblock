@@ -1,0 +1,22 @@
+<template>
+  <require from="./login.css"></require>
+  <div class="d-flex">
+    <div class="login-container card-panel teal lighten-2"></div>
+    <div class="login-container center">
+      <div class="full-length">
+        <h4>E-Block Login</h4>
+        <form submit.trigger="handleLogin()">
+          <div class="input-field">
+            <label for="username">Username</label>
+            <input type="text" id="username" value.bind="username" />
+          </div>
+          <div class="input-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" value.bind="password" />
+          </div>
+          <button class="btn waves-effect waves-light full-length" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
