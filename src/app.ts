@@ -11,9 +11,12 @@ export class App {
   }
 
   configureRouter(config: RouterConfiguration, router: Router): void {
+    this.router = router;
+    config.title = "E-Block"
+    config.options.pushState = true;
     config.map([
-      { route: '', name: 'login', moduleId: PLATFORM.moduleName('./components/Login/login'), title: 'Login', nav: true },
-      { route: 'sign-up', name: 'signup', moduleId: PLATFORM.moduleName('./components/SignUp/signup'), title: 'Sign Up', nav: false }
+      { route: '', name: 'login', moduleId: PLATFORM.moduleName('./components/Login/login'), title: 'Login' },
+      { route: 'sign-up', name: 'signup', moduleId: PLATFORM.moduleName('./components/SignUp/signup'), title: 'Sign Up' }
     ]);
   }
 }
