@@ -12,8 +12,8 @@ export class App {
 
   configureRouter(config: RouterConfiguration, router: Router): void {
     config.map([
-      { route: '', name: 'login', moduleId: PLATFORM.moduleName('./components/Login/login'), title: 'Login' },
-      { route: 'sign-up', name: 'signup', moduleId: PLATFORM.moduleName('./resources/SignUp/signup'), title: 'Sign Up', nav: true }
+      { route: '', name: 'login', moduleId: PLATFORM.moduleName('./components/Login/login'), title: 'Login', nav: true },
+      { route: 'sign-up', name: 'signup', moduleId: PLATFORM.moduleName('./components/SignUp/signup'), title: 'Sign Up', nav: false }
     ]);
   }
 }
