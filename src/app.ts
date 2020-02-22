@@ -12,18 +12,8 @@ export class App {
 
   configureRouter(config: RouterConfiguration, router: Router): void {
     config.map([
-      { route: '', name: 'signup', moduleId: PLATFORM.moduleName('./resources/SignUp/signup'), title: 'Sign Up' }
+      { route: '', name: 'login', moduleId: PLATFORM.moduleName('./components/Login/login'), title: 'Login' },
+      { route: 'sign-up', name: 'signup', moduleId: PLATFORM.moduleName('./resources/SignUp/signup'), title: 'Sign Up', nav: true }
     ]);
   }
-
-  // configureRouter(config: RouterConfiguration, router: Router): void{
-  //   this.router = router;
-  //   config.title = 'Aurelia';
-  //   config.options.pushState = true;
-  //   config.options.root = './resources/SignUp/signup';
-  //   config.map([
-  //     {route: 'signup', name: 'signup', moduleId:'./resources/SignUp/signup' }
-  //   ])
-  //   console.log("router: ", router);
-  // }
 }
