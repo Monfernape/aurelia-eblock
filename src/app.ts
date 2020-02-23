@@ -15,8 +15,8 @@ export class App {
     config.title = "E-Block"
     config.options.pushState = true;
     config.map([
-      { route: '', name: 'login', moduleId: PLATFORM.moduleName('./components/Login/login'), title: 'Login' },
-      { route: 'sign-up', name: 'signup', moduleId: PLATFORM.moduleName('./components/SignUp/signup'), title: 'Sign Up' }
+      { route: ['', 'login'], name: 'login', moduleId: PLATFORM.moduleName('./components/Login/login'), title: 'Login' },
+      { route: 'sign-up', name: 'sign-up', moduleId: PLATFORM.moduleName('./components/SignUp/signup'), title: 'Sign Up' }
     ]);
   }
 }
