@@ -8,13 +8,13 @@
         <form submit.trigger="handleLogin()">
           <div class="input-field">
             <label for="username">Username</label>
-            <input type="text" id="username" class.bind="username.length? 'valid': 'invalid'" value.bind="username" />
+            <input type="text" id="username" class="form-control" value.bind="username" />
           </div>
           <div class="input-field">
             <label for="password">Password</label>
-            <input type="password" id="password" class.bind="password.length? 'valid': 'invalid'" value.bind="password" />
+            <input type="password" id="password" class="" value.bind="password" />
           </div>
-          <button class="btn waves-effect waves-light full-length" type="submit">Login</button>
+          <button class="btn waves-effect waves-light full-length" type="submit" click.delegate="onSubmit()">Login</button>
         </form>
         <p>
           <i click.delegate="router.navigateToRoute('sign-up')"><b>New to E-Block? Sign Up here</b></i>
