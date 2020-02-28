@@ -1,15 +1,16 @@
+import { MaintenanceType } from './maintenancetype';
 import { CreateOrderModel } from './createorder-model';
 import { Router } from 'aurelia-router';
 import { inject } from 'aurelia-dependency-injection';
-import $ from 'jquery';
 
 @inject(Router)
 export class CreateOrder {
 
   private model;
-  private selectedMaintenanceTypeId: number;
+  private selectedMaintenanceTypeObject: MaintenanceType = null;
 
   constructor(private router: Router){
+    this.selectedMaintenanceTypeObject;
   }
 
   activate(){
@@ -23,12 +24,6 @@ export class CreateOrder {
     this.defineMaintenanceTypeData();
   }
 
-  attached(){
-    $(document).ready(function() {
-      $('select').material_select();
-  });
-  }
-
   defineModel(){
     this.model.cIsInspection = false;
   }
@@ -40,11 +35,18 @@ export class CreateOrder {
       {id: 3, option: "Brakes Service"},
       {id: 4, option: "Parts Replacement"}
     ];
-    this.selectedMaintenanceTypeId = null;
   }
 
   selectedMaintenanceType(selectedOption){
     console.log("selectedOption: ", selectedOption);
+  }
+
+  onSubmit(){
+
+  }
+
+  onCancel(){
+    
   }
 
 }
