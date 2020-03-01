@@ -1,11 +1,11 @@
 <template>
   <require from="./createorder.css"></require>
 
-  <div class="form">
+  <form class="form-horizontal" submit.trigger="onSubmit()">
     <div class="row">
       <div class="column form-group">
         <div class="input-field">
-          <i class="material-icons prefix">directions_car</i>
+          <!-- <i class="material-icons prefix">directions_car</i> -->
           <input id="carNameId" type="text" value.two-way="model.iCarName" class="validate">
           <label for="carNameId">Car Name</label>
         </div>
@@ -13,7 +13,7 @@
 
       <div class="column">
         <div class="input-field form-group">
-          <i class="material-icons prefix">border_top</i>
+          <!-- <i class="material-icons prefix">border_top</i> -->
           <input id="carModelId" type="text" value.two-way="model.iCarName" class="validate">
           <label for="carModelId">Car Model</label>
         </div>
@@ -32,23 +32,37 @@
 
       <div class="column form-group">
         <label>Select Maintenance Type:<br>
-          <select value.bind="selectedMaintenanceTypeId" id="maintenanceId"
-            change.delegate="selectedMaintenanceType(selectedMaintenanceTypeId)">
-            <option repeat.for="item of model.ddMaintenanceTypeData" model.bind='item.id'>
+          <select value.bind="selectedMaintenanceTypeObject" id="maintenanceId"
+            change.delegate="selectedMaintenanceType(selectedMaintenanceTypeObject)">
+            <option model.bind="null">Choose</option>
+            <option repeat.for="item of model.ddMaintenanceTypeData" model.bind='item'>
               ${item.option}
             </option>
           </select>
         </label>
       </div>
+    </div>
 
+    <div class="row">
       <div class="column form-group">
         <div class="input-field">
-          <i class="material-icons prefix"></i>
+          <!-- <i class="material-icons prefix"></i> -->
           <input id="carColorId" type="text" value.two-way="model.iCarColor" class="validate">
           <label for="carColorId">Car Color</label>
         </div>
       </div>
-
     </div>
-  </div>
+
+
+        <!-- 'Submit' and 'Cancel' buttons starts here -->
+        <div class="row">
+          <div class="column right-align">
+            <button click.delegate="onCancel()">Cancel</button>
+            <button click.delegate="onSubmit()">Submit</button>
+          </div>
+        </div>
+        <!-- 'Submit' and 'Cancel' buttons ends here -->
+
+
+  </form>
 </template>
