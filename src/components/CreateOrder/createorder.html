@@ -1,68 +1,56 @@
 <template>
   <require from="./createorder.css"></require>
 
-  <form class="form-horizontal" submit.trigger="onSubmit()">
-    <div class="row">
-      <div class="column form-group">
-        <div class="input-field">
+    <form class="container" submit.trigger="handleCreateOrder()">
+      <div class="row">
+        <div class="input-field input-control">
           <!-- <i class="material-icons prefix">directions_car</i> -->
           <input id="carNameId" type="text" value.two-way="model.iCarName" class="validate">
           <label for="carNameId">Car Name</label>
         </div>
-      </div>
 
-      <div class="column">
-        <div class="input-field form-group">
+        <div class="input-field input-control">
           <!-- <i class="material-icons prefix">border_top</i> -->
           <input id="carModelId" type="text" value.two-way="model.iCarName" class="validate">
           <label for="carModelId">Car Model</label>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="column">
-        <div class="col m4 s12 mt-2 form-group">
-          <label class="position-relative">
-            <input type="checkbox" checked.bind="model.cIsInspection" class="au-target" tabindex="7" au-target-id="294">
-            <span> Would you like to complete inspection? </span>
-          </label>
-        </div>
-      </div>
-
-      <div class="column form-group">
-        <label>Select Maintenance Type:<br>
-          <select value.bind="selectedMaintenanceTypeObject" id="maintenanceId"
-            change.delegate="selectedMaintenanceType(selectedMaintenanceTypeObject)">
-            <option model.bind="null">Choose</option>
+      <div class="row">
+        <div class="input-control">
+          <select md-select="label: Select Maintenance Type" value.bind="selectedMaintenanceTypeObject">
+            <option value="" disabled selected>Choose</option>
             <option repeat.for="item of model.ddMaintenanceTypeData" model.bind='item'>
               ${item.option}
             </option>
           </select>
-        </label>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="column form-group">
-        <div class="input-field">
-          <!-- <i class="material-icons prefix"></i> -->
-          <input id="carColorId" type="text" value.two-way="model.iCarColor" class="validate">
+      <div class="row">
+        <div class=" input-control">
+          <md-datepicker container.bind="dpWrapper" label="Expected Return Date"
+            value.two-way="model.dtExpectedReturnDate" placeholder="pick a date"></md-datepicker>
+        </div>
+        <div class="input-control">
           <label for="carColorId">Car Color</label>
+          <input class="input-color" id="carColorId" type="color" value.two-way="model.iCarColor" class="validate">
         </div>
       </div>
-    </div>
 
+      <div class="row">
+        <label class="position-relative">
+          <input type="checkbox" checked.bind="model.cIsInspection">
+          <span> Would you like to have complete inspection? </span>
+        </label>
 
-        <!-- 'Submit' and 'Cancel' buttons starts here -->
-        <div class="row">
-          <div class="column right-align">
-            <button click.delegate="onCancel()">Cancel</button>
-            <button click.delegate="onSubmit()">Submit</button>
-          </div>
+      </div>
+
+      <div class="row">
+        <div class="column right-align">
+          <button md-button click.delegate="onCancel()">Cancel</button>
+          <button md-button type="submit">Submit</button>
         </div>
-        <!-- 'Submit' and 'Cancel' buttons ends here -->
-
-
-  </form>
+      </div>
+    </form>
 </template>

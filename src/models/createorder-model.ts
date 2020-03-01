@@ -5,6 +5,6 @@ export class CreateOrderModel {
   iCarModel: string;
   cIsInspection: boolean;
   ddMaintenanceTypeData: MaintenanceType[];
-  dtExpectedReturnDate: string;
+  dtExpectedReturnDate: Date;
   iCarColor: string;
 }

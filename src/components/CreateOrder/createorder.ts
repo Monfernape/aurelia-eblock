@@ -1,31 +1,30 @@
-import { MaintenanceType } from './maintenancetype';
-import { CreateOrderModel } from './createorder-model';
+import { MaintenanceType } from '../../models/maintenancetype';
+import { CreateOrderModel } from '../../models/createorder-model';
 import { Router } from 'aurelia-router';
 import { inject } from 'aurelia-dependency-injection';
 
 @inject(Router)
 export class CreateOrder {
 
-  private model;
+  private model: CreateOrderModel;
   private selectedMaintenanceTypeObject: MaintenanceType = null;
 
-  constructor(private router: Router){
-    this.selectedMaintenanceTypeObject;
-  }
+  constructor(private router: Router) { }
 
   activate(){
     this.model = new CreateOrderModel();
   }
 
+  // Defininig Model
+  // defining dropdowns
   bind(){
-    // Defininig Model
     this.defineModel();
-    // defining dropdowns
     this.defineMaintenanceTypeData();
   }
 
   defineModel(){
     this.model.cIsInspection = false;
+    this.model.dtExpectedReturnDate = new Date()
   }
 
   defineMaintenanceTypeData(){
@@ -37,11 +36,7 @@ export class CreateOrder {
     ];
   }
 
-  selectedMaintenanceType(selectedOption){
-    console.log("selectedOption: ", selectedOption);
-  }
-
-  onSubmit(){
+  handleCreateOrder(){
 
   }
 
