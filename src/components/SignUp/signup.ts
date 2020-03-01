@@ -1,9 +1,13 @@
+import { Router } from 'aurelia-router';
 import { inject } from 'aurelia-dependency-injection';
 
-@inject()
+@inject(Router)
 export class Signup {
 
-  constructor(){
+  constructor(private router: Router){
+  }
+
+  handleRegister(){
     
   }
 }

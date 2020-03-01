@@ -16,7 +16,9 @@ export class App {
     config.options.pushState = true;
     config.map([
       { route: ['', 'login'], name: 'login', moduleId: PLATFORM.moduleName('./components/Login/login'), title: 'Login' },
-      { route: 'sign-up', name: 'sign-up', moduleId: PLATFORM.moduleName('./components/SignUp/signup'), title: 'Sign Up' }
+      { route: 'sign-up', name: 'sign-up', moduleId: PLATFORM.moduleName('./components/SignUp/signup'), title: 'Sign Up' },
+      { route: 'create-order', name: 'create-order', moduleId: PLATFORM.moduleName('./components/CreateOrder/createorder'), title: 'Create Order' }
+
     ]);
   }
 }
