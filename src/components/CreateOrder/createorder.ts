@@ -16,7 +16,7 @@ export class CreateOrder {
   }
 
   // Defininig Model
-  // defining dropdowns
+  // Defining dropdowns
   bind(){
     this.defineModel();
     this.defineMaintenanceTypeData();

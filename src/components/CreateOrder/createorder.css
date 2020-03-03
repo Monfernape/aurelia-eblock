@@ -1,19 +1,6 @@
 .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-}
-
-.column {
-  margin-left: 10px;
-  margin-right: 10px;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
-.right-align {
-  text-align: right;
 }
 
 .container {
@@ -21,20 +8,10 @@
   height: 100vh;
 }
 
-@media screen and (min-width: 760){
-  .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-  }
-}
-
 @media screen and (max-width: 480px){
   .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
   }
 }
@@ -54,4 +31,9 @@
 
 .mr-auto {
   margin: 0 15px
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
 }
