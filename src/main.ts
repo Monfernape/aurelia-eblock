@@ -7,7 +7,8 @@ export function configure(aurelia: Aurelia) {
   aurelia.use
     .standardConfiguration()
     .feature(PLATFORM.moduleName('resources/index'))
-    .plugin(PLATFORM.moduleName('aurelia-materialize-bridge'), b => b.useAll());
+    .plugin(PLATFORM.moduleName('aurelia-materialize-bridge'), b => b.useAll())
+    .plugin(PLATFORM.moduleName('aurelia-validation'));
 
 
   aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
