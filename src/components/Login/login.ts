@@ -20,12 +20,16 @@ export class Login {
   handleLogin = () => {
     this.controller.validate()
     .then(validation => {
-      if(validation.valid) this.errors = {}
+      if(validation.valid){
+        localStorage.setItem('currentUser', JSON.stringify(this.username));
+        this.errors = {}
+      } 
       else {
         validation.results.forEach(x => {
           this.errors[x.propertyName] = x.rule.message.value
         })
       }
-    })  }
+    })
+  }
 
 }
