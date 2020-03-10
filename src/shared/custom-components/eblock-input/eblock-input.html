@@ -3,8 +3,8 @@
     
     <div class="input-field">
         <i class="material-icons prefix">${iconName}</i>
-        <input type="${inputType}" id="${id}" class="form-control" value.bind="value" blur.trigger="onBlur()" />
-        <span class="error" if.bind="error">${error}.${propertyName}</span>
-        <label for="${id}">${label}</label>
+        <input type="${inputType}" id.bind="id" class="form-control" value.bind="value" blur.trigger="onBlur()" />
+        <span class="error" if.bind="error[propertyName]">${error[propertyName]}</span>
+        <label for.bind="id">${label}</label>
     </div>
 </template>

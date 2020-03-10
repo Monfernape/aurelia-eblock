@@ -18,6 +18,7 @@ export class Login {
   }
 
   handleLogin = () => {
+    this.errors = {};
     this.controller.validate()
     .then(validation => {
       if(validation.valid){
@@ -29,6 +30,7 @@ export class Login {
           this.errors[x.propertyName] = x.rule.message.value
         })
       }
+      console.log("this.errors:", this.errors);
     })
   }
 
