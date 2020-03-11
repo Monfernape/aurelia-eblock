@@ -1,11 +1,45 @@
 <template>
   <table>
-    <tr repeat.for="">
-      <th></th>
+    <tr>
+      <th repeat.for="column of columns">${column}</th>
     </tr>
 
-    <tr repeat.for="">
-      <td></td>
-    </tr>
+      <tr repeat.for="row of rows">
+        <td repeat.for="cell of row">${cell.userName}</td>
+        <td repeat.for="cell of row">${cell.carName}</td>
+        <td repeat.for="cell of row">${cell.carModel}</td>
+        <td repeat.for="cell of row">${cell.maintenanceType}</td>
+        <td repeat.for="cell of row">${cell.returnDate}</td>
+        <td repeat.for="cell of row">${cell.carColor}</td>
+        <td repeat.for="cell of row">${cell.isInspection}</td>
+      </tr>
   </table>
+
+  <!-- <table>
+    <thead>
+      <tr>
+          <th>Name</th>
+          <th>Item Name</th>
+          <th>Item Price</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Alvin</td>
+        <td>Eclair</td>
+        <td>$0.87</td>
+      </tr>
+      <tr>
+        <td>Alan</td>
+        <td>Jellybean</td>
+        <td>$3.76</td>
+      </tr>
+      <tr>
+        <td>Jonathan</td>
+        <td>Lollipop</td>
+        <td>$7.00</td>
+      </tr>
+    </tbody>
+  </table> -->
 </template>
