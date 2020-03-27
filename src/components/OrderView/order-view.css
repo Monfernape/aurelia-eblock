@@ -1,0 +1,39 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  width: 80%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 480px){
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.input-color {
+  width: 100%;
+  margin: 15px auto;
+  border: 0px none transparent
+}
+
+.input-control {
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 50%
+}
+
+.mr-auto {
+  margin: 0 15px
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}

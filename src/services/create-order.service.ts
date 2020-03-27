@@ -15,10 +15,14 @@ export class OrderService {
     });
   }
 
-  getDataById(currentUser) {
+  getDataById(id, currentUser) {
+    console.log("id: ", typeof id);
     return new Promise((resolve, reject) => {
       let getStoredData = JSON.parse(localStorage.getItem(`order${currentUser}`));
-      resolve(getStoredData);
+      console.log("getStoredData: ", getStoredData);
+      let result;
+      getStoredData.filter(innerData => result = innerData.find(element => id === element.id));
+      resolve(result);
     });
   }
 }

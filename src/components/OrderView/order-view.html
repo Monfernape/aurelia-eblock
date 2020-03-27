@@ -1,0 +1,35 @@
+<template>
+  <require from="./order-view.css"></require>
+  <!-- Order View -->
+  <form class="container" submit.trigger="handleCreateOrder()">
+    <div class="row">
+      <!-- <i class="material-icons prefix">directions_car</i> -->
+      <label class="input-field input-control" for="carNameId">Car Name
+        <input id="carNameId" type="text" value.two-way="model.iCarName" readonly>
+      </label>
+
+      <!-- <i class="material-icons prefix">border_top</i> -->
+      <label class="input-field input-control" for="carModelId">Car Model
+        <input id="carModelId" type="text" value.two-way="model.iCarModel" readonly>
+      </label>
+    </div>
+
+    <div class="row">
+
+      <label class="input-field input-control" for="MaintenanceId">Maintenance Type
+        <input id="MaintenanceId" type="text" value.two-way="model.ddMaintenanceTypeData" readonly></label>
+
+      <label class="input-field input-control" for="ReturnDateId">Return Date
+        <input id="ReturnDateId" type="text" value.two-way="model.dtExpectedReturnDate" readonly></label>
+    </div>
+
+    <div class="row">
+      <label class="input-field input-control">inspection?
+        <input type="text" value.two-way="model.cIsInspection" readonly></label>
+
+      <label class="input-field input-control" for="carColorId">Car Color
+        <input class="input-color" id="carColorId" type="text" value.two-way="model.iCarColor" readonly></label>
+    </div>
+
+  </form>
+</template>

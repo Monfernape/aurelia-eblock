@@ -47,8 +47,8 @@ export class CreateOrder {
   handleCreateOrder() {
     let currentUser = JSON.parse(localStorage.getItem('currentUser'));
     let obj = {
-      id: this.createUUID(), userName: currentUser, carName: this.model.iCarName, carModel: this.model.iCarModel, maintenanceType: this.selectedMaintenanceTypeObject.option,
-      returnDate: this.model.dtExpectedReturnDate, carColor: this.model.iCarColor, isInspection: this.model.cIsInspection
+      id: this.createUUID(), userName: currentUser, iCarName: this.model.iCarName, iCarModel: this.model.iCarModel, ddMaintenanceTypeData: this.selectedMaintenanceTypeObject.option,
+      dtExpectedReturnDate: this.model.dtExpectedReturnDate, iCarColor: this.model.iCarColor, cIsInspection: this.model.cIsInspection
     };
     let data = [];
     data.push(obj);
