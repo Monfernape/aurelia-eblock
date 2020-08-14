@@ -1,0 +1,18 @@
+<template>
+  <table>
+    <tr>
+      <th repeat.for="column of columns">${column}</th>
+    </tr>
+
+      <tr repeat.for="row of rows" click.delegate="onRowSelection(row)">
+        <td repeat.for="cell of row">${cell.userName}</td>
+        <td repeat.for="cell of row">${cell.iCarName}</td>
+        <td repeat.for="cell of row">${cell.iCarModel}</td>
+        <td repeat.for="cell of row">${cell.ddMaintenanceTypeData}</td>
+        <td repeat.for="cell of row">${cell.dtExpectedReturnDate}</td>
+        <td repeat.for="cell of row">${cell.iCarColor}</td>
+        <td repeat.for="cell of row">${cell.cIsInspection}</td>
+      </tr>
+  </table>
+
+</template>

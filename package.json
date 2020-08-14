@@ -8,8 +8,15 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@types/materialize-css": "^1.0.7",
+    "aurelia-animator-css": "^1.0.4",
+    "aurelia-bootstrap": "^0.1.20",
     "aurelia-bootstrapper": "^2.3.2",
-    "aurelia-animator-css": "^1.0.4"
+    "aurelia-materialize-bridge": "^1.5.2",
+    "aurelia-typed-observable-plugin": "^0.4.2",
+    "aurelia-validation": "^1.6.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "tslib": "^1.11.1"
   },
   "devDependencies": {
     "aurelia-cli": "^1.2.3",

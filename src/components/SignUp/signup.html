@@ -1,0 +1,48 @@
+<template>
+  <require from="../Login/login.css"></require>
+  <require from="../../shared/custom-components/eblock-input/eblock-input"></require>
+
+  <div class="d-flex">
+    <div class="login-container card-panel teal lighten-2"></div>
+    <div class="login-container center">
+      <div class="full-length">
+        <h4>E-Block Register</h4>
+        <form submit.trigger="handleRegister()">
+
+          <div class="input-field">
+            <eblock-input id="nameId" input-type="text" value.two-way="username " label="Name"
+            icon-name="account_circle"></eblock-input>
+
+            <!-- <i class="material-icons prefix">account_circle</i>
+            <input id="nameId" type="text" class="validate">
+            <label for="nameId">Name</label> -->
+          </div>
+
+          <div class="input-field">
+            <i class="material-icons prefix">email</i>
+            <input id="emailId" type="email" class="validate">
+            <label for="emailId">Email</label>
+          </div>
+
+          <div class="input-field">
+            <i class="material-icons prefix">phone</i>
+            <input id="phoneId" type="text" class="validate">
+            <label for="phoneId">Phone</label>
+          </div>
+
+          <div class="input-field">
+            <i class="material-icons prefix">lock</i>
+            <input id="passwordId" type="password" class="validate">
+            <label for="passwordId">Password</label>
+          </div>
+
+          <button class="btn waves-effect waves-light full-length" type="submit">Register</button>
+        </form>
+        <p>
+          <i click.delegate="router.navigateToRoute('login')"><b>Login</b></i>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</template>

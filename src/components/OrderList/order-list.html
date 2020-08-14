@@ -1,0 +1,5 @@
+<template>
+  <require from="../../shared/OrderDetails/order-details"></require>
+
+  <order-detail rows.bind="rows" columns.bind="columns" view-order.call="viewOrder(selectedRow)"></order-detail>
+</template>

@@ -1,0 +1,53 @@
+<template>
+  <require from="./createorder.css"></require>
+
+    <form class="container" submit.trigger="handleCreateOrder()">
+      <div class="row">
+        <div class="input-field input-control">
+          <!-- <i class="material-icons prefix">directions_car</i> -->
+          <input id="carNameId" type="text" value.two-way="model.iCarName" class="validate">
+          <label for="carNameId">Car Name</label>
+        </div>
+
+        <div class="input-field input-control">
+          <!-- <i class="material-icons prefix">border_top</i> -->
+          <input id="carModelId" type="text" value.two-way="model.iCarModel" class="validate">
+          <label for="carModelId">Car Model</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-control">
+          <select md-select="label: Select Maintenance Type" value.bind="selectedMaintenanceTypeObject">
+            <option value="" disabled selected>Choose</option>
+            <option repeat.for="item of model.ddMaintenanceTypeData" model.bind='item'>
+              ${item.option}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class=" input-control">
+          <md-datepicker container.bind="dpWrapper" label="Expected Return Date"
+            value.two-way="model.dtExpectedReturnDate" placeholder="pick a date"></md-datepicker>
+        </div>
+        <div class="input-control">
+          <label for="carColorId">Car Color</label>
+          <input class="input-color" id="carColorId" type="color" value.two-way="model.iCarColor" class="validate">
+        </div>
+      </div>
+
+      <div class="row">
+        <label class="mr-auto">
+          <input type="checkbox" checked.bind="model.cIsInspection">
+          <span> Would you like to have complete inspection? </span>
+        </label>
+      </div>
+
+      <div class="flex-end">
+          <button class="mr-auto" md-button click.delegate="onCancel()">Cancel</button>
+          <button class="mr-auto"  md-button type="submit">Submit</button>
+      </div>
+    </form>
+</template>
